@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML storage</title>
+    <script>
+        function clickCounter()
+        {
+            if(typeof(Storage)!=="undefined")
+            {
+                if (localStorage.clickcount)
+                {
+                    localStorage.clickcount=Number(localStorage.clickcount)+1;
+                }
+                else
+                {
+                    localStorage.clickcount=1;
+                }
+                document.getElementById("result").innerHTML=" You have clicked the button " + localStorage.clickcount + " times. ";
+            }
+            else
+            {
+                document.getElementById("result").innerHTML="Sorry, your browser does not support web storage...";
+            }
+        }
+    </script>
+</head>
+<body>
+<p><button onclick="clickCounter()" type="button">Click me!</button></p>
+<div id="result"></div>
+<p>Click the button to check how many times you have clicked.</p>
+<p>Close the browser window, reopen this page, and the counter will continue to count (not reset).</p>
+<p>If you use sessionStorage, the counter will reset.</p>
+</body>
+</html>
