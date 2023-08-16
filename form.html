@@ -13,19 +13,15 @@
     <label>
         Last name:
         <input type="text" name="lastname">
-    </label>
-</form>
-<form action="">
+    </label><br>
     <label>
-        Username:
-        <input type="text" name="user">
+        Color:
+        <input type="color" name="color">
     </label><br>
     <label>
         Password:
         <input type="password" name="password">
-    </label>
-</form>
-<form action="">
+    </label><br>
     <label>
         <input type="radio" name="sex" value="male">
         male
@@ -33,16 +29,14 @@
     <label>
         <input type="radio" name="sex" value="female">
         female
-    </label>
-</form>
-<form>
+    </label><br>
     <label>
         <input type="checkbox" name="vehicle" value="Bike">
-        A
+        Bike
     </label><br>
     <label>
         <input type="checkbox" name="vehicle" value="Car">
-        B
+        Car
     </label>
 </form>
 <form name="input" action="html_form_action.php" method="get">
@@ -69,22 +63,77 @@
 Hello world!
 </textarea>
 </label>
-<form action="">
+<form action="" autocomplete="on">
     <fieldset>
         <legend>Personal information:</legend>
         <label>
             Name:
-            <input type="text" size="30">
-        </label><br>
-        <label>
-            E-mail:
-            <input type="text" size="30">
+            <input type="text" size="30" autofocus>
         </label><br>
         <label>
             Date of birth:
-            <input type="text" size="10">
+            <input type="date" size="20">
+        </label><br>
+        <label>
+            Date and time of birth:
+            <input type="datetime-local" size="30">
+        </label><br>
+        <label>
+            Email:
+            <input type="email" size="30">
+        </label><br>
+        <label>
+            Month:
+            <input type="month" size="20">
+        </label><br>
+        <label>
+            Number:
+            <input type="number" size="20" min="0" max="10">
+        </label><br>
+        <label>
+            Phone number:
+            <input type="tel" size="20">
+        </label><br>
+        <label>
+            Range:
+            <input type="range" size="20" min="0" max="100" id="rangeInput">
+            <span id="rangeValue">0</span>
+        </label><br>
+        <label>
+            Search Google:
+            <input type="search" size="20">
+        </label><br>
+        <label>
+            Add your homepage url:
+            <input type="url" size="20">
+        </label><br>
+        <label>
+            Choose your browser from the list:
+            <input list="browsers" name="browser">
         </label>
+        <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
     </fieldset>
 </form>
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+    <label>
+        A simple calculator:<br>
+        0<input type="range" id="a" value="0">100
+        +<input type="number" id="b" value="0">
+        =<output name="x" for="a b"></output>
+    </label>
+</form>
+<script>
+    const rangeInput = document.getElementById("rangeInput");
+    const rangeValue = document.getElementById("rangeValue");
+    rangeInput.addEventListener("input", function() {
+        rangeValue.textContent = rangeInput.value;
+    });
+</script>
 </body>
 </html>

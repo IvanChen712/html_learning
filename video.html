@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML video</title>
+</head>
+<body>
+<div style="text-align:center">
+    <button onclick="playPause()">play/pause </button>
+    <button onclick="makeBig()">big </button>
+    <button onclick="makeSmall()">small </button>
+    <button onclick="makeNormal()">normal </button>
+    <br>
+    <video id="video1" width="420">
+        <source src="images/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support HTML5 video tags.
+    </video>
+</div>
+
+<script>
+    const myVideo = document.getElementById("video1");
+
+    function playPause()
+    {
+        if (myVideo.paused)
+            myVideo.play();
+        else
+            myVideo.pause();
+    }
+
+    function makeBig()
+    {
+        myVideo.width=560;
+    }
+
+    function makeSmall()
+    {
+        myVideo.width=320;
+    }
+
+    function makeNormal()
+    {
+        myVideo.width=420;
+    }
+</script>
+</body>
+</html>
