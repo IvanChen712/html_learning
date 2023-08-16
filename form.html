@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML form</title>
+</head>
+<body>
+<form action="">
+    <label>
+        First name:
+        <input type="text" name="firstname">
+    </label><br>
+    <label>
+        Last name:
+        <input type="text" name="lastname">
+    </label>
+</form>
+<form action="">
+    <label>
+        Username:
+        <input type="text" name="user">
+    </label><br>
+    <label>
+        Password:
+        <input type="password" name="password">
+    </label>
+</form>
+<form action="">
+    <label>
+        <input type="radio" name="sex" value="male">
+        male
+    </label><br>
+    <label>
+        <input type="radio" name="sex" value="female">
+        female
+    </label>
+</form>
+<form>
+    <label>
+        <input type="checkbox" name="vehicle" value="Bike">
+        A
+    </label><br>
+    <label>
+        <input type="checkbox" name="vehicle" value="Car">
+        B
+    </label>
+</form>
+<form name="input" action="html_form_action.php" method="get">
+    <label>
+        Username:
+        <input type="text" name="user">
+    </label>
+    <input type="submit" value="Submit">
+</form>
+<form action="">
+    <label>
+        Car:
+        <select name="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat" selected>Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+    </label>
+</form>
+<label>
+    Text area:
+<textarea rows="10" cols="30">
+Hello world!
+</textarea>
+</label>
+<form action="">
+    <fieldset>
+        <legend>Personal information:</legend>
+        <label>
+            Name:
+            <input type="text" size="30">
+        </label><br>
+        <label>
+            E-mail:
+            <input type="text" size="30">
+        </label><br>
+        <label>
+            Date of birth:
+            <input type="text" size="10">
+        </label>
+    </fieldset>
+</form>
+</body>
+</html>

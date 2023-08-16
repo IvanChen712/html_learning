@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML script</title>
+</head>
+<body>
+<script>
+  document.write("Hello World!")
+</script>
+<noscript>Sorry, your browser does not support JavaScript!</noscript>
+<script>
+  document.write("<h1>Title</h1>");
+  document.write("<p>Paragraph</p>");
+</script>
+<p id="demo">
+  Hello html!</p>
+<script>
+  function changeText()
+  {
+    document.getElementById("demo").innerHTML="Hello JavaScript!";
+  }
+</script>
+<button type="button" onclick="changeText()">Click on me!🤗</button>
+<script>
+  function changeColor()
+  {
+    const x = document.getElementById("demo");
+    x.style.color="#ff0000";
+  }
+</script>
+<button type="button" onclick="changeColor()">Change color.</button>
+</body>
+</html>
